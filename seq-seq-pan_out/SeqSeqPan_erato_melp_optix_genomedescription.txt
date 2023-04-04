@@ -1,0 +1,2 @@
+1	Herato1801 dna:scaffold scaffold:v1:Herato1801:1:2000000:1	2000000
+2	Hmel218003 dna:scaffold scaffold:Hmel2:Hmel218003:1:1895173:1	1895173
