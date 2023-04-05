@@ -42,15 +42,15 @@ rect(0,8,2000000,9, col = 'deepskyblue', border = NA)
 rect(0,1,2000000,2, col = 'mediumseagreen', border = NA)
 
 # We also know the positions of the optix gene and we can add these with the same rect() function trick.
-rect(705604,9,706407,10, col = 'red', border = 'red') # position optix melpomene (only has one exon)
+rect(705604,9.2,706407,10, col = 'red', border = 'red') # position optix melpomene (only has one exon)
 
-rect(1239943,0,1239972,1, col = 'red', border = 'red') # first exon position optix erato
-rect(1250591,0,1251211,1, col = 'red', border = 'red') # second exon position optix erato
-rect(1239943,0.5,1251211,0.5, col = 'red', border = 'red') # A little line between the two and we have a gene model!
+rect(1239943,0,1239972,0.8, col = 'red', border = 'red') # first exon position optix erato
+rect(1250591,0,1251211,0.8, col = 'red', border = 'red') # second exon position optix erato
+rect(1239943,0.5,1251211,0.4, col = 'red', border = 'red') # A little line between the two and we have a gene model!
 
 # With the text function, we can add the gene and species names at the appropriate coordinates.
-text(706407, 9.5, substitute(paste(italic('optix'))), pos = 4)
-text(1251211, 9.5, substitute(paste(italic('optix'))), pos = 4)
+text(706407, 9.6, substitute(paste(italic('optix'))), pos = 4)
+text(1251211, 0.4, substitute(paste(italic('optix'))), pos = 4)
 
 text(start, 7.5, substitute(paste(italic('H. melpomene'))), pos = 4)
 text(start, 2.5, substitute(paste(italic('H. erato'))), pos = 4)
@@ -76,15 +76,15 @@ rect(0,8,2000000,9, col = 'deepskyblue', border = NA)
 rect(0,1,2000000,2, col = 'mediumseagreen', border = NA)
 
 # We also know the positions of the optix gene and we can add these with the same rect() function trick.
-rect(705604,9,706407,10, col = 'red', border = 'red') # position optix melpomene (only has one exon)
+rect(705604,9.2,706407,10, col = 'red', border = 'red') # position optix melpomene (only has one exon)
 
-rect(1239943,0,1239972,1, col = 'red', border = 'red') # first exon position optix erato
-rect(1250591,0,1251211,1, col = 'red', border = 'red') # second exon position optix erato
-rect(1239943,0.5,1251211,0.5, col = 'red', border = 'red') # A little line between the two and we have a gene model!
+rect(1239943,0,1239972,0.8, col = 'red', border = 'red') # first exon position optix erato
+rect(1250591,0,1251211,0.8, col = 'red', border = 'red') # second exon position optix erato
+rect(1239943,0.5,1251211,0.4, col = 'red', border = 'red') # A little line between the two and we have a gene model!
 
 # With the text function, we can add the gene and species names at the appropriate coordinates.
-text(706407, 9.5, substitute(paste(italic('optix'))), pos = 4)
-text(1251211, 9.5, substitute(paste(italic('optix'))), pos = 4)
+text(706407, 9.6, substitute(paste(italic('optix'))), pos = 4)
+text(1251211, 0.4, substitute(paste(italic('optix'))), pos = 4)
 
 text(start, 7.5, substitute(paste(italic('H. melpomene'))), pos = 4)
 text(start, 2.5, substitute(paste(italic('H. erato'))), pos = 4)
@@ -119,15 +119,15 @@ rect(0+plotDiff,8,2000000+plotDiff,9, col = 'deepskyblue', border = NA)
 rect(0,1,2000000,2, col = 'mediumseagreen', border = NA)
 
 # We also know the positions of the optix gene and we can add these with the same rect() function trick.
-rect(705604+plotDiff,9,706407+plotDiff,10, col = 'red', border = 'red') # position optix melpomene (only has one exon)
+rect(705604+plotDiff,9.2,706407+plotDiff,10, col = 'red', border = 'red') # position optix melpomene (only has one exon)
 
-rect(1239943,0,1239972,1, col = 'red', border = 'red') # first exon position optix erato
-rect(1250591,0,1251211,1, col = 'red', border = 'red') # second exon position optix erato
-rect(1239943,0.5,1251211,0.5, col = 'red', border = 'red') # A little line between the two and we have a gene model!
+rect(1239943,0,1239972,0.8, col = 'red', border = 'red') # first exon position optix erato
+rect(1250591,0,1251211,0.8, col = 'red', border = 'red') # second exon position optix erato
+rect(1239943,0.5,1251211,0.4, col = 'red', border = 'red') # A little line between the two and we have a gene model!
 
 # With the text function, we can add the gene and species names at the appropriate coordinates.
-text(706407+plotDiff, 9.5, substitute(paste(italic('optix'))), pos = 4)
-text(1251211, 9.5, substitute(paste(italic('optix'))), pos = 4)
+text(706407+plotDiff, 9.6, substitute(paste(italic('optix'))), pos = 4)
+text(1251211, 0.4, substitute(paste(italic('optix'))), pos = 4)
 
 text(start, 7.5, substitute(paste(italic('H. melpomene'))), pos = 4)
 text(start, 2.5, substitute(paste(italic('H. erato'))), pos = 4)
@@ -153,6 +153,16 @@ layout.show(n=7)
 
 par(mar = c(0.5,5,0.5,1), xpd = FALSE)
 
+# Plot the title of the plot
+plot(NULL, xlim=c(start,end), ylim = c(0,1), axes=FALSE, ann=FALSE)
+mtext('Minimap2 aligned genome plot', side = 1, cex=1, col = 'black', line =-1)
+
+# Plot the x-axis as a separate plot
+plot(NULL, xlim=c(start,end), ylim = c(0,1), axes=FALSE, ann=FALSE)
+axis(1, at = seq(0,3124353, by=10000), labels = NA, line =-3)
+axis(1, at = seq(0,3124353, by=100000), labels = round(seq(0/1000000,3124353/1000000, by=0.1),1), line =-3)
+mtext('Chromosome position', side = 1, cex=0.8, col = 'black', line =-1)
+
 # Define the interval (relative to the H. erato genome)
 start = 1239943 - 10000
 end = 1251211 + 200000
@@ -166,19 +176,19 @@ plotDiff = 1251211 - 706407
 plot(NULL, xlim = c(start, end), ylim = c(0,10), axes=F, ylab = '', xlab = '')
 
 # Now we can draw two simple rectangles, one will define the genomic interval/sequence of H. melpomene (deepskyblue), the other H. erato (mediumseagreen).
-rect(0+plotDiff,8,2000000+plotDiff,9, col = 'deepskyblue', border = NA)
-rect(0,1,2000000,2, col = 'mediumseagreen', border = NA)
+rect(0+plotDiff,8,2000000+plotDiff,8.8, col = 'deepskyblue', border = NA)
+rect(0,1.2,2000000,2, col = 'mediumseagreen', border = NA)
 
 # We also know the positions of the optix gene and we can add these with the same rect() function trick.
-rect(705604+plotDiff,9,706407+plotDiff,10, col = 'red', border = 'red') # position optix melpomene (only has one exon)
+rect(705604+plotDiff,9.2,706407+plotDiff,10, col = 'red', border = 'red') # position optix melpomene (only has one exon)
 
-rect(1239943,0,1239972,1, col = 'red', border = 'red') # first exon position optix erato
-rect(1250591,0,1251211,1, col = 'red', border = 'red') # second exon position optix erato
-rect(1239943,0.5,1251211,0.5, col = 'red', border = 'red') # A little line between the two and we have a gene model!
+rect(1239943,0,1239972,0.8, col = 'red', border = 'red') # first exon position optix erato
+rect(1250591,0,1251211,0.8, col = 'red', border = 'red') # second exon position optix erato
+rect(1239943,0.5,1251211,0.4, col = 'red', border = 'red') # A little line between the two and we have a gene model!
 
 # With the text function, we can add the gene and species names at the appropriate coordinates.
-text(706407+plotDiff, 9.5, substitute(paste(italic('optix'))), pos = 4)
-text(1251211, 9.5, substitute(paste(italic('optix'))), pos = 4)
+text(706407+plotDiff, 9.6, substitute(paste(italic('optix'))), pos = 4)
+text(1251211, 0.4, substitute(paste(italic('optix'))), pos = 4)
 
 text(start, 7.5, substitute(paste(italic('H. melpomene'))), pos = 4)
 text(start, 2.5, substitute(paste(italic('H. erato'))), pos = 4)
