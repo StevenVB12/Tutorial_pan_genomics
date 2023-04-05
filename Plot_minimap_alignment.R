@@ -46,7 +46,7 @@ rect(705604,9.2,706407,10, col = 'red', border = 'red') # position optix melpome
 
 rect(1239943,0,1239972,0.8, col = 'red', border = 'red') # first exon position optix erato
 rect(1250591,0,1251211,0.8, col = 'red', border = 'red') # second exon position optix erato
-rect(1239943,0.5,1251211,0.4, col = 'red', border = 'red') # A little line between the two and we have a gene model!
+rect(1239943,0.4,1251211,0.4, col = 'red', border = 'red') # A little line between the two and we have a gene model!
 
 # With the text function, we can add the gene and species names at the appropriate coordinates.
 text(706407, 9.6, substitute(paste(italic('optix'))), pos = 4)
@@ -80,7 +80,7 @@ rect(705604,9.2,706407,10, col = 'red', border = 'red') # position optix melpome
 
 rect(1239943,0,1239972,0.8, col = 'red', border = 'red') # first exon position optix erato
 rect(1250591,0,1251211,0.8, col = 'red', border = 'red') # second exon position optix erato
-rect(1239943,0.5,1251211,0.4, col = 'red', border = 'red') # A little line between the two and we have a gene model!
+rect(1239943,0.4,1251211,0.4, col = 'red', border = 'red') # A little line between the two and we have a gene model!
 
 # With the text function, we can add the gene and species names at the appropriate coordinates.
 text(706407, 9.6, substitute(paste(italic('optix'))), pos = 4)
@@ -123,7 +123,7 @@ rect(705604+plotDiff,9.2,706407+plotDiff,10, col = 'red', border = 'red') # posi
 
 rect(1239943,0,1239972,0.8, col = 'red', border = 'red') # first exon position optix erato
 rect(1250591,0,1251211,0.8, col = 'red', border = 'red') # second exon position optix erato
-rect(1239943,0.5,1251211,0.4, col = 'red', border = 'red') # A little line between the two and we have a gene model!
+rect(1239943,0.4,1251211,0.4, col = 'red', border = 'red') # A little line between the two and we have a gene model!
 
 # With the text function, we can add the gene and species names at the appropriate coordinates.
 text(706407+plotDiff, 9.6, substitute(paste(italic('optix'))), pos = 4)
@@ -184,7 +184,7 @@ rect(705604+plotDiff,9.2,706407+plotDiff,10, col = 'red', border = 'red') # posi
 
 rect(1239943,0,1239972,0.8, col = 'red', border = 'red') # first exon position optix erato
 rect(1250591,0,1251211,0.8, col = 'red', border = 'red') # second exon position optix erato
-rect(1239943,0.5,1251211,0.4, col = 'red', border = 'red') # A little line between the two and we have a gene model!
+rect(1239943,0.4,1251211,0.4, col = 'red', border = 'red') # A little line between the two and we have a gene model!
 
 # With the text function, we can add the gene and species names at the appropriate coordinates.
 text(706407+plotDiff, 9.6, substitute(paste(italic('optix'))), pos = 4)
